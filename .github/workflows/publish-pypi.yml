@@ -3,7 +3,7 @@ name: Publish to PyPI
 on:
     push:
         branches:
-            - main # Triggers the workflow on commits to the main branch
+            - main
 
 jobs:
     build:
@@ -16,7 +16,7 @@ jobs:
             - name: Set up Python
               uses: actions/setup-python@v4
               with:
-                  python-version: "3.12" # Specify the Python version you require
+                  python-version: "3.12"
 
             - name: Install dependencies
               run: |
@@ -28,9 +28,9 @@ jobs:
 
             - name: Publish to PyPI
               env:
-                  TWINE_USERNAME: "__token__
+                  TWINE_USERNAME: "__token__" # For OIDC, this is still required as a placeholder
               run: |
                   python -m twine upload --skip-existing dist/*
+              # GitHub Actions will handle authentication using OIDC
               with:
-                twine: "latest"
-
+                  twine: "latest"
