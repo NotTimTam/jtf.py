@@ -2,9 +2,8 @@ name: Publish to PyPI
 
 on:
     push:
-        tags:
-            - "v*" # Triggers the workflow when pushing a tag that starts with 'v'
-    workflow_dispatch: # Allows manual triggering of the workflow
+        branches:
+            - main # Triggers the workflow on commits to the main branch
 
 jobs:
     build:
