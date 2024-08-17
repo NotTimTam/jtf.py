@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.12
 
-from util import is_valid_index, is_valid_version_number, is_plain_object
+from src.util import is_valid_index, is_valid_version_number, is_plain_object
 from datetime import datetime, UTC
 import json
 import re
