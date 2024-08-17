@@ -28,7 +28,9 @@ jobs:
 
             - name: Publish to PyPI
               env:
-                  TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-                  TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+                  TWINE_USERNAME: "__token__
               run: |
                   python -m twine upload --skip-existing dist/*
+              with:
+                twine: "latest"
+
