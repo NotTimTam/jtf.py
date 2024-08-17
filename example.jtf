@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "author": "NotTimTam",
+        "title": "JTF v1.1.9 Example Document",
+        "jtf": "v1.1.9",
+        "css": ".highlighed-row { color: yellow; }",
+        "extra": {
+            "jtf-core": {
+                "someExtraData": [
+                    345,
+                    2345,
+                    8365,
+                    21345,
+                    764
+                ]
+            },
+            "my-processor": "38298752935-2357627835023-128746128764"
+        }
+    },
+    "data": {
+        "0": {
+            "data": {
+                "0": {
+                    "13": "Hello, world!"
+                },
+                "1": {},
+                "999": {
+                    "0": "This is the 0th cell in the 999th row."
+                }
+            },
+            "label": "First Table",
+            "style": [
+                {
+                    "type": "style",
+                    "target": [
+                        "0:10",
+                        0
+                    ],
+                    "data": "background-color: red;"
+                }
+            ]
+        },
+        "1": {
+            "data": {
+                "0": {
+                    "0": "This is some text in table two."
+                }
+            },
+            "label": "Second Table",
+            "style": [
+                {
+                    "type": "style",
+                    "target": [
+                        0,
+                        0
+                    ],
+                    "data": "background-color: blue;"
+                }
+            ]
+        },
+        "3": {
+            "data": {
+                "0": {
+                    "0": 14,
+                    "1": 16
+                },
+                "1": {
+                    "0": "27"
+                }
+            },
+            "label": "Third Table"
+        }
+    },
+    "style": [
+        {
+            "type": "class",
+            "target": [
+                null,
+                2
+            ],
+            "data": "highlighted-row"
+        },
+        {
+            "type": "style",
+            "target": [
+                [
+                    2
+                ],
+                1
+            ],
+            "data": "font-weight: bold;"
+        },
+        {
+            "type": "style",
+            "target": [
+                [],
+                3
+            ],
+            "data": "background-color: #f0f0f0;"
+        }
+    ]
+}
