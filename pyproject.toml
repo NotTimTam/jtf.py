@@ -28,6 +28,5 @@ keywords = ["json", "table", "spreadsheet", "fileformat", "utility"]
 license = {file = "LICENSE", content-type = "text/plain"}
 
 [project.urls]
-Homepage = "https://github.com/NotTimTam/jtf#readme"
-Repository = "https://github.com/NotTimTam/jtf.py.git"
+Repository = "https://github.com/NotTimTam/jtf.py"
 Issues = "https://github.com/NotTimTam/jtf/issues"
