@@ -12,10 +12,22 @@ jobs:
         environment:
             name: pypi
             url: https://pypi.org/p/jtf
-        permissions:
+                permissions:
             id-token: write
         steps:
-            # retrieve your distributions here
+            - name: Check out the code
+              uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.12"
+
+            - name: Install build tools
+              run: python -m pip install --upgrade build
+
+            - name: Build package
+              run: python -m build
 
             - name: Publish package distributions to PyPI
               uses: pypa/gh-action-pypi-publish@release/v1
