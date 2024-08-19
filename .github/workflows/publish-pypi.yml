@@ -31,6 +31,3 @@ jobs:
                   TWINE_USERNAME: "__token__" # For OIDC, this is still required as a placeholder
               run: |
                   python -m twine upload --skip-existing dist/*
-              # GitHub Actions will handle authentication using OIDC
-              with:
-                  twine: "latest"
