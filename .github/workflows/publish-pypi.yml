@@ -9,25 +9,13 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
+        environment:
+            name: pypi
+            url: https://pypi.org/p/jtf
+        permissions:
+            id-token: write
         steps:
-            - name: Check out the code
-              uses: actions/checkout@v3
+            # retrieve your distributions here
 
-            - name: Set up Python
-              uses: actions/setup-python@v4
-              with:
-                  python-version: "3.12"
-
-            - name: Install dependencies
-              run: |
-                  python -m pip install --upgrade pip
-                  pip install build twine
-
-            - name: Build the package
-              run: python -m build
-
-            - name: Publish to PyPI
-              env:
-                  TWINE_USERNAME: "__token__" # For OIDC, this is still required as a placeholder
-              run: |
-                  python -m twine upload --skip-existing dist/*
+            - name: Publish package distributions to PyPI
+              uses: pypa/gh-action-pypi-publish@release/v1
